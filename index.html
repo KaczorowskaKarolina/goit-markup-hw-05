@@ -60,7 +60,7 @@
           EFEKTYWNE ROZWIĄZANIA <br />
           DLA WASZEGO BIZNESU
         </h1>
-        <button class="button" type="button">Zamów usługę</button>
+        <button class="button" type="button" data-modal-open>Zamów usługę</button>
       </section>
       <section class="section">
         <h2 hidden>Nasze zalety</h2>
@@ -119,13 +119,22 @@
         <h2 class="h2">Czym się zajmujemy</h2>
         <ul class="name-card">
           <li class="item-projects">
-            <img src="images/img.jpg" alt="komputer1" width="370" height="294" />
+            <figure class="img-with-title">
+              <img src="images/img.jpg" alt="komputer1" width="370" height="294" />
+              <figcaption class="img-title">APLIKACJE KOMPUTEROWE</figcaption>
+            </figure>
           </li>
           <li class="item-projects">
-            <img src="images/img1.jpg" alt="komputer2" width="370" height="294" />
+            <figure class="img-with-title">
+              <img src="images/img1.jpg" alt="komputer2" width="370" height="294" />
+              <figcaption class="img-title">APLIKACJE MOBILNE</figcaption>
+            </figure>
           </li>
           <li class="item-projects">
-            <img src="images/img2.jpg" alt="komputer3" width="370" height="294" />
+            <figure class="img-with-title">
+              <img src="images/img2.jpg" alt="komputer3" width="370" height="294" />
+              <figcaption class="img-title">ROZWIĄZANIA GRAFICZNE</figcaption>
+            </figure>
           </li>
         </ul>
       </section>
@@ -329,5 +338,11 @@
         </div>
       </div>
     </footer>
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="close-button" data-modal-close>X</button>
+      </div>
+    </div>
+    <script src="./js/modal.js"></script>
   </body>
 </html>
