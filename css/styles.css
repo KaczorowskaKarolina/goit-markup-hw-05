@@ -373,7 +373,7 @@ ul {
 .img-with-title {
   position: relative;
   margin: 0px;
-  display: block;
+  display: flex;
 }
 
 .img-title {
@@ -525,7 +525,6 @@ ul {
 
 .icon-join-us {
   fill: #afb1b8;
-  /* padding: 20px 10px 0px 0px; */
   background-color: #ffffff1a;
   padding: 14px;
   border-radius: 50%;
@@ -553,9 +552,9 @@ ul {
 
 .modal {
   position: relative;
-  top: 221px;
-  left: 536px;
-  transform: translate(0%, 5%);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 528px;
   min-height: 581px;
   background: #ffffff;
@@ -570,10 +569,24 @@ ul {
   right: 8px;
   width: 30px;
   height: 30px;
-  background: #ffffff;
+  background: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
+}
+
+.close-icon {
+  fill: #000000;
+  background-color: transparent;
+  display: flex;
+}
+
+.close-button:hover,
+.close-button:focus,
+.close-icon:hover,
+.close-icon:focus {
+  background-color: var(--highlight-color);
+  fill: #ffffff;
 }
 
 .is-hidden {
