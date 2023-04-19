@@ -575,6 +575,9 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
+  animation: modal-animation-open 3000ms infinite 1000ms;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .close-button {
@@ -587,17 +590,14 @@ ul {
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   cursor: pointer;
-  display: inline-block;
+  padding: 0;
 }
 
 .close-icon {
   fill: #000000;
   background-color: transparent;
   display: flex;
-  position: absolute;
-right: 5px;
-top: 4px;
-
+  justify-content: center;
 }
 
 .close-button:hover,
@@ -613,7 +613,28 @@ top: 4px;
   visibility: hidden;
   opacity: 10;
   transform: translateX(-50%) translateY(-50%);
-} 
+  animation: modal-animation-close 3000ms infinite 1000ms;
+  opacity: 0;
+  pointer-events: none;
+}
+
+@keyframes modal-animation-open {
+  from {
+    transform: scale(0.25);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+@keyframes modal-animation-close {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(0.25);
+  }
+}
 
 /*   PORTFOLIO    */
 
@@ -697,6 +718,13 @@ top: 4px;
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: relative;
+  overflow: hidden;
 }
 
 .portfolio-pictures .h3 {
@@ -727,4 +755,33 @@ top: 4px;
 .portfolio-p {
   padding: 0px 24px 20px 24px;
   margin: 0px;
+}
+
+.overlay {
+  width: 370px;
+  height: 294px;
+  position: absolute;
+  margin: 0;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  color: #ffffff;
+  background-color: rgba(33, 150, 243, 0.9);
+  transform: translateY(100%);
+  transition-duration: 20ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+
+  font-size: 18px;
+  line-height: 1.55;
+  letter-spacing: 0.03em;
+  text-align: left;
+  padding-top: 49px;
+  padding-left: 24px;
+  padding-right: 45px;
+}
+
+.portfolio-pictures:hover .overlay {
+  transform: translateY(0);
 }
