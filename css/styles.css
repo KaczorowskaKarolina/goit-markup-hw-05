@@ -575,8 +575,11 @@ ul {
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  /* animation: modal-animation-open 3000ms; */
-  pointer-events: none;
+  animation-name: modal-animation-open;
+  animation-timing-function: 5000ms;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-iteration-count: 1;
 }
 
 .close-button {
@@ -597,6 +600,7 @@ ul {
   background-color: transparent;
   display: flex;
   justify-content: center;
+  border-radius: 50%;
 }
 
 .close-button:hover,
@@ -612,27 +616,30 @@ ul {
   visibility: hidden;
   opacity: 10;
   transform: translateX(-50%) translateY(-50%);
-  /* animation: modal-animation-close 3000ms; */
-  /* pointer-events: none; */
+  animation: modal-animation-close;
+  animation-duration: 3000ms;
+  animation-direction: reverse;
+  animation-fill-mode: forwards;
+  animation-iteration-count: 1;
 }
 
-/* @keyframes modal-animation-open {
-  from {
-    transform: scale(0.25);
+@keyframes modal-animation-open {
+  from{
+    transform: scale(0);
   }
   to {
     transform: scale(1);
   }
-} */
+}
 
-/* @keyframes modal-animation-close {
+@keyframes modal-animation-close {
   from {
     transform: scale(1);
   }
   to {
-    transform: scale(0.25);
+    transform: scale(0);
   }
-} */
+}
 
 /*   PORTFOLIO    */
 
