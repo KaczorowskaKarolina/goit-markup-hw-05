@@ -60,6 +60,7 @@ nav {
   font-size: 14px;
   display: flex;
   margin: 32px 46px 32px 0px;
+  transition-property: color;
 }
 
 .is-on {
@@ -105,6 +106,7 @@ nav {
   display: flex;
   padding: 0px 10px 0px 50px;
   align-items: center;
+  transition-property: color;
 }
 
 .link-contact-header:hover,
@@ -168,6 +170,7 @@ nav {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
+  transition-property: color;
 }
 
 .studio {
@@ -180,6 +183,7 @@ nav {
   font-style: normal;
   font-weight: 700;
   font-size: 26px;
+  transition-property: color;
 }
 
 .main-box {
@@ -223,6 +227,7 @@ nav {
   font-size: 16px;
   border-style: none;
   padding: 10px 41px 10px 42px;
+  transition-property: color, background-color;
 }
 
 .advantages {
@@ -321,6 +326,7 @@ nav {
   line-height: 1.19;
   font-style: normal;
   font-weight: 700;
+  transition-property: color;
 }
 
 .footer-address {
@@ -331,6 +337,7 @@ nav {
   cursor: pointer;
   letter-spacing: 0.03em;
   line-height: 1.71;
+  transition-property: color;
 }
 
 .footer-address:hover,
@@ -475,6 +482,8 @@ ul {
   fill: #afb1b8;
   padding: 14px;
   display: flex;
+  border-radius: 50%;
+  transition-property: fill, background-color;
 }
 
 .icon-social-media:focus,
@@ -521,6 +530,7 @@ ul {
   margin-bottom: 94px;
   fill: #afb1b8;
   cursor: pointer;
+  transition-property: fill, border-color;
 }
 
 .icon-clients:focus,
@@ -560,6 +570,7 @@ ul {
   border-radius: 50%;
   cursor: pointer;
   display: flex;
+  transition-property: background-color;
 }
 
 .icon-join-us:focus,
@@ -622,6 +633,7 @@ ul {
   border-radius: 50%;
   cursor: pointer;
   padding: 0;
+  transition-property: background-color;
 }
 
 .close-icon {
@@ -630,6 +642,7 @@ ul {
   display: flex;
   justify-content: center;
   border-radius: 50%;
+  transition-property: fill, background-color;
 }
 
 .close-button:hover,
@@ -662,6 +675,7 @@ ul {
   padding: 6px 22px 6px 22px;
   margin-left: 4px;
   margin-right: 4px;
+  transition-property: color, background-color;
 }
 
 .portfolio-button:hover,
@@ -728,6 +742,7 @@ ul {
   border-left: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
   border-bottom: 1px solid #eeeeee;
+  transition-property: box-shadow;
 }
 
 .portfolio-pictures .h3 {
